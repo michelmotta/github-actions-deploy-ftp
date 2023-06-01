@@ -45,11 +45,10 @@ jobs:
 
       # Runs a deploy command using the runners shell
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: airvzxf/ftp-deployment-action@latest
         with:
           server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          log-level: verbose
-          local-dir: ./dist/
-          server-dir: www/teste/
+          local_dir: ./dist/
+          remote_dir: www/teste/
