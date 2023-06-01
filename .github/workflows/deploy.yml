@@ -52,4 +52,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           log-level: verbose
           local-dir: ./dist/
-          server-dir: /www/teste/
+          server-dir: www/teste/
