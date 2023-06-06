@@ -61,5 +61,4 @@ jobs:
           user: ${{ secrets.FTP_USERNAME }}
           pass: ${{ secrets.FTP_PASSWORD }}
           scp: |
-            whoami
             ls -al
