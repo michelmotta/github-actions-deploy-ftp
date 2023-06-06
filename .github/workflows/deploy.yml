@@ -53,3 +53,13 @@ jobs:
           log-level: verbose
           local-dir: ./dist/
           server-dir: teste/
+
+      - name: Executing remote ssh commands
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          script: |
+            whoami
+            ls -al
