@@ -55,11 +55,8 @@ jobs:
           server-dir: teste/
 
       - name: Executing remote ssh commands
-        uses: appleboy/ssh-action@v0.1.10
+        uses: cross-the-world/ssh-scp-ssh-pipelines@latest
         with:
           host: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          script: |
-            whoami
-            ls -al
+          user: ${{ secrets.FTP_USERNAME }}
+          pass: ${{ secrets.FTP_PASSWORD }}
